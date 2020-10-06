@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon ./index.js --exec babel-node -e js"
+    "dev": "nodemon --exec babel-node index.js",
+    "start": "node --exec babel-node index.js"
   },
   "author": "Emmanuel Henri, implemented and updated by @helladyo",
   "license": "ISC",
@@ -13,12 +14,13 @@
     "express": "^4.17.1",
     "express-graphql": "^0.11.0",
     "graphql": "^15.3.0",
-    "mongoose": "^5.10.8",
-    "nodemon": "^2.0.4"
+    "mongoose": "^5.10.8"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-es2015": "^6.24.1",
-    "babel-preset-stage-0": "^6.24.1"
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.0",
+    "@babel/node": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "nodemon": "^2.0.4"
   }
 }
