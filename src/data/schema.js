@@ -13,6 +13,7 @@ const typeDefs = `
 
     type Query {
         getContacts: [Contact]
+        getOneContact(id: ID!): Contact
     }
 
     input ContactInput {
@@ -24,8 +25,11 @@ const typeDefs = `
     }
 
     type Mutation {
-        createContact(input: ContactInput)
+        createContact(input: ContactInput): Contact
+        updateContact(input: ContactInput): Contact
     }
 `;
 
-const schema = makeExecutableSchema({ typeDefs, resolvers })
+const schema = makeExecutableSchema({ typeDefs, resolvers });
+
+export { schema };
