@@ -1,0 +1,31 @@
+// In case you have several data bases, connections goes here
+import { resolvers } from './resolvers';
+import { makeExecutableSchema } from 'graphql-tools';
+
+const typeDefs = `
+    type Contact {
+        id: ID
+        firstName: String
+        lastName: String
+        email: String
+        company: String
+    }
+
+    type Query {
+        getContacts: [Contact]
+    }
+
+    input ContactInput {
+        id: ID
+        firstName: String
+        lastName: String
+        email: String
+        company: String
+    }
+
+    type Mutation {
+        createContact(input: ContactInput)
+    }
+`;
+
+const schema = makeExecutableSchema({ typeDefs, resolvers })
