@@ -1,4 +1,3 @@
-// import { Promise } from 'mongoose';
 import { Contacts } from './dbConnectors';
 
 // Resolver map: is a way to define what is available and what it doable inside graphQL 
@@ -41,6 +40,15 @@ export const resolvers = {
         Contacts.findOneAndUpdate({ _id: input.id }, input, { new: true }, (err, contact) => {
             if (err) reject(err);
             else resolve(contact);
+          });
+      });
+    },
+    // Delete
+    deleteContact: (root, { id }) => {
+      return new Promise((resolve, reject) => {
+        Contacts.findOneAndDelete({ _id: id }, err => {
+            if (err) reject(err);
+            else resolve('Contact was successfully deleted!');
           });
       });
     }
