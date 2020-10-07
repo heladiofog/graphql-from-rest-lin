@@ -1,15 +1,14 @@
 {
-  "name": "graphql-lin",
+  "name": "graphql-from-rest-lin",
   "version": "1.0.0",
-  "description": "LinkedIn course sample.",
+  "description": "LinkedIn course sample, updated on October 2020.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon --exec babel-node index.js",
-    "start": "node --exec babel-node index.js"
+    "start": "nodemon --exec babel-node index.js"
   },
-  "author": "Emmanuel Henri, implemented and updated by @helladyo",
-  "license": "ISC",
+  "author": "Based on Emmanuel Henri sample project, implemented and updated by @helladyo",
+  "license": "MIT",
   "dependencies": {
     "express": "^4.17.1",
     "express-graphql": "^0.11.0",
@@ -23,5 +22,16 @@
     "@babel/node": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
     "nodemon": "^2.0.4"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/heladiofog/graphql-from-rest-lin"
+  },
+  "keywords": [
+    "graphql",
+    "mongodb",
+    "mongoose",
+    "babel",
+    "api"
+  ]
 }

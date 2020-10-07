@@ -46,7 +46,8 @@ export const resolvers = {
     // Delete
     deleteContact: (root, { id }) => {
       return new Promise((resolve, reject) => {
-        Contacts.findOneAndDelete({ _id: id }, err => {
+        // Contacts.findOneAndDelete({ _id: id }, err => {
+        Contacts.deleteOne({ _id: id }, err => {
             if (err) reject(err);
             else resolve('Contact was successfully deleted!');
           });

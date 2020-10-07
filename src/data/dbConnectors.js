@@ -5,7 +5,8 @@ import mongoose from 'mongoose';
 mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://localhost/contacts', {
   useNewUrlParser: true,
-  useUnifiedTopology: true
+  useUnifiedTopology: true,
+  useFindAndModify: false
 });
 
 const Schema = mongoose.Schema;
